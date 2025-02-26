@@ -1,9 +1,6 @@
 
-PINECONE_API_KEY = 'pcsk_49H1KG_LWe5PjAUyYUQzsosFHuZMSqQhVRdKmXVVkncZXgfztXKqhPnVtndPD8SnTZ277F'
-GEMINI_API_KEY = 'AIzaSyDLOcRQekIIRmiW1dzqT2HdVigaW2ZPXHM'
-
-STREAMLIT_PINECONE_API_KEY = PINECONE_API_KEY
-STREAMLIT_GEMINI_API_KEY = GEMINI_API_KEY
+STREAMLIT_PINECONE_API_KEY = '<copy-paste-the-pinecone-api-key-here>'
+STREAMLIT_GEMINI_API_KEY = '<copy-paste-the-gemini-api-key-here>'
 STREAMLIT_INDEX_NAME = 'sunway-demo'
 
 import streamlit as st
