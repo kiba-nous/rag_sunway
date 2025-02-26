@@ -1,3 +1,11 @@
+
+PINECONE_API_KEY = 'pcsk_49H1KG_LWe5PjAUyYUQzsosFHuZMSqQhVRdKmXVVkncZXgfztXKqhPnVtndPD8SnTZ277F'
+GEMINI_API_KEY = 'AIzaSyDLOcRQekIIRmiW1dzqT2HdVigaW2ZPXHM'
+
+STREAMLIT_PINECONE_API_KEY = PINECONE_API_KEY
+STREAMLIT_GEMINI_API_KEY = GEMINI_API_KEY
+STREAMLIT_INDEX_NAME = 'sunway-demo'
+
 import streamlit as st
 from pinecone.grpc import PineconeGRPC as Pinecone
 from sentence_transformers import SentenceTransformer
@@ -7,11 +15,11 @@ from google import genai
 st.set_page_config(page_title="RAG Chatbot Demo", layout="wide")
 
 # Initialize Pinecone
-pc = Pinecone(api_key='pcsk_49H1KG_LWe5PjAUyYUQzsosFHuZMSqQhVRdKmXVVkncZXgfztXKqhPnVtndPD8SnTZ277F')
-index = pc.Index("sunway-demo")  # Make sure this matches your index name in the notebook
+pc = Pinecone(api_key=STREAMLIT_PINECONE_API_KEY)
+index = pc.Index(STREAMLIT_INDEX_NAME)
 
 # Initialize Google Genai client
-client = genai.Client(api_key="AIzaSyBU6KkDTG6-71FC2raqVswQgotX_rIGRkg")
+client = genai.Client(api_key=STREAMLIT_GEMINI_API_KEY)
 
 # Load the embedding model
 @st.cache_resource
