@@ -45,13 +45,6 @@
 
 4. Now you can install and use dependencies within your virtual environment.
 
-## Installing Dependencies
-
-After setting up your virtual environment and kernel, install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
 ## Troubleshooting
 
 - If your kernel doesn't appear in the list, restart Jupyter Notebook
